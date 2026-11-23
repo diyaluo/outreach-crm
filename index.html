@@ -99,6 +99,14 @@
             "@type": "Answer",
             "text": "Nowhere except DNS. Addresses stay in local CSV and state files on your machine; the only outbound traffic is the MX lookup needed to validate a domain."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a free version?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The free Lite edition does the cleaning and the live MX validation, as a separate download. The paid edition adds ICP scoring, personalized draft rendering, the per-draft CAN-SPAM check and the CRM state machine."
+          }
         }
       ]
     }
@@ -132,6 +140,8 @@
     .btn { display:inline-block; padding:14px 28px; border-radius:10px; font-weight:700; text-decoration:none; font-size:16px; transition:.15s; }
     .btn-primary { background:var(--primary); color:#fff; box-shadow:var(--shadow-lg); }
     .btn-primary:hover { background:var(--primary-hover); transform:translateY(-1px); }
+    .btn-free { background:#fff; color:var(--primary); border:2px solid var(--primary); }
+    .btn-free:hover { background:#ecfdf5; transform:translateY(-1px); }
     .trust { margin-top:22px; font-size:14px; color:var(--text-secondary); display:flex; gap:22px; justify-content:center; flex-wrap:wrap; }
     .trust span::before { content:"✓ "; color:var(--primary); font-weight:800; }
     h2 { font-size:30px; letter-spacing:-.3px; margin-bottom:14px; }
@@ -186,6 +196,7 @@
     <p class="lead">A bounce rate above five percent damages your sending domain, and that damage follows every email you send afterwards. This tool is built around one rule: never send to an address you have not checked, and never send a template you have not compliance-checked. Everything runs on your machine, with DNS as the only thing that leaves it.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://elbertscribe6.gumroad.com/l/krtbd">Get Outreach CRM — $24.99</a>
+      <a class="btn btn-free" href="https://elbertscribe6.gumroad.com/l/gpkyt">Start with the free list cleaner &mdash; $0</a>
     </div>
     <div class="trust">
       <span>No pip install &amp;mdash; standard library only</span><span>No API keys or SaaS account</span><span>Only DNS lookups leave your machine</span>
@@ -257,6 +268,7 @@
     <details><summary>Is the validation as good as a paid email verifier?</summary><p>It does real MX lookups, which catches dead domains, typo&#x27;d domains and domains that refuse mail. It does not do SMTP mailbox probing, so it cannot confirm an individual inbox exists. MX-level validation is the honest ceiling without touching the recipient&#x27;s server.</p></details>
     <details><summary>What does it do with bounces and unsubscribes?</summary><p>They enter a suppression list automatically, and every future list is filtered through it. The state machine enforces valid transitions so a lead cannot silently move from bounced back to sendable.</p></details>
     <details><summary>Where does my data go?</summary><p>Nowhere except DNS. Addresses stay in local CSV and state files on your machine; the only outbound traffic is the MX lookup needed to validate a domain.</p></details>
+    <details><summary>Is there a free version?</summary><p>Yes. The free Lite edition does the cleaning and the live MX validation, as a separate download. The paid edition adds ICP scoring, personalized draft rendering, the per-draft CAN-SPAM check and the CRM state machine.</p></details>
   </div>
 </section>
 
